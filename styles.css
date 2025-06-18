@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fcd116 0%, #003893 50%, #ce1126 100%);
+  min-height: 100vh;
+  padding-top: 100px; /* espacio para el menú fijo */
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3); /* transparente */
+  backdrop-filter: blur(10px);          /* efecto de vidrio */
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  color: #003893;
+  font-weight: bold;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.menu button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  width: 100%;
+  max-width: 400px;
+}
+
+.content {
+  max-height: 500px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  background: rgba(255, 255, 255, 0.5); /* fondo con transparencia */
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.8); /* más claro para destacar */
+  border-left: 5px solid #003893;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.hidden {
+  display: none;
+}

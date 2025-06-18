@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Colombia Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>API Colombia Explorer 🇨🇴</h1>
+
+    <nav class="menu">
+      <button onclick="showView('home')">Departamentos y Ciudades</button>
+      <button onclick="showView('presidents')">Presidentes</button>
+      <button onclick="showView('regions')">Regiones</button>
+      <button onclick="showView('attractions')">Atracciones</button>
+      <button onclick="showView('country')">País</button>
+    </nav>
+
+    <!-- Vista principal -->
+    <section id="home" class="view">
+      <div class="filter">
+        <label for="departments">Seleccione un departamento:</label>
+        <select id="departments">
+          <option value="">-- Cargando departamentos... --</option>
+        </select>
+      </div>
+      <div id="content" class="content">
+        <p>Seleccione un departamento para ver sus ciudades.</p>
+      </div>
+    </section>
+
+    <!-- Otras vistas -->
+    <section id="presidents" class="view hidden"></section>
+    <section id="regions" class="view hidden"></section>
+    <section id="attractions" class="view hidden"></section>
+    <section id="country" class="view hidden"></section>
+    <section id="airports" class="view hidden">
+  <div class="filter">
+    <input type="text" id="airportSearch" placeholder="Buscar aeropuerto...">
+    <button onclick="searchAirport()">Buscar</button>
+  </div>
+  <div id="airportsContent" class="content">
+    <p>Cargando aeropuertos...</p>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
